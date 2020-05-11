@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./styles/mystyle.css">
+  <title>Image Composing</title>
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top sty-navbar">
+        <div class="container">
+            <a class="navbar-brand"><img src="https://github.com/vinayakkuradia/Techstack/raw/master/html/TechStack/img/logo.png" width="50px"/></a>
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Filters</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+      <h3>Upload Images and Choose Filter: </h3>
+      <div class="row">  
+        <canvas class="column" id="canvas1">
+        </canvas>
+        <canvas class="column" id="canvas2">
+        </canvas>
+      </div>
+      
+          <div class="row form-group mb-3">
+            <div class="column col-6 fileUpload">
+              <label for="fgFile">Foreground Image: </label>
+              <input class="form-control-file" name="fgFile" type="file" multiple="false" accept="image/*" id="fgFile" onchange="fgUpload()">
+          </div>
+    
+          <div class="custom-file column col-6 fileUpload">
+            <label for="bgFile">Background Image: </label>
+            <input class="form-control-file" name="bgFile" type="file" multiple="false" accept="image/*" id="bgFile" onchange="bgUpload()">
+          </div>
+      </div>
+
+      <div>
+        <input class="btn btn-dark" type="button" value="Create Composite" onclick="createComposite()">
+        <input class="btn btn-dark" type="button" value="Clear Canvases" onclick="clearCanvases()"
+      </div>
+    </div>
+<!-- partial -->
+  <script  src="./js/script.js"></script>
+  <script  src="./js/SimpleImage.js"></script>
+
+</body>
+</html>

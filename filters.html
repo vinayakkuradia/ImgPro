@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./styles/mystyle.css">
+  <title>Filters</title>
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top sty-navbar">
+        <div class="container">
+            <a class="navbar-brand"><img src="https://github.com/vinayakkuradia/Techstack/raw/master/html/TechStack/img/logo.png" width="50px"/></a>
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Filters</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+    <h3>Upload Image and Choose Filter: </h3>
+    <div class="row">  
+        <div class="card">
+        <div class="card-header">Input Image:</div>
+        <canvas class="" id="canvas1">
+        </canvas>
+        </div>
+        <div class="card">
+        <div class="card-header">Output Image:</div>
+        <canvas class="" id="canvas2">
+        </canvas>
+        </div>
+    </div>
+        
+ <form>
+  <div class="form-row align-items-center">
+    <div class="row form-group">
+      <div class="col-lg-6">
+                <div class="fileUpload">
+                  <label for="fgFile">Upload Image: </label>
+                  <input class="form-control-file" name="fgFile" type="file" multiple="false" accept="image/*" id="fgFile" onchange="fgUpload()">
+              </div>
+          </div>
+      <div class="col-6">
+      <label class="input-group-text" for="inlineFormCustomSelect">Filter:</label>
+      <select onchange="assignValue(value)" class="custom-select " id="inlineFormCustomSelect">
+        <option selected>Choose Filter...</option>
+        <option value="1">Grayscale</option>
+        <option value="2">Rainbow</option>
+        <option value="3">Blur</option>
+      </select>
+      </div>
+    </div>
+    </div>
+</form>       
+  <div>
+    <input class="btn btn-dark" type="button" value="Apply Filter" onclick="applyfilter()">
+    <input class="btn btn-dark" type="button" value="Clear Canvases" onclick="clearCanvases()"
+   </div>
+</div>
+<!-- partial -->
+<script  src="./js/script.js"></script>
+<script  src="./js/SimpleImage.js"></script>
+
+</body>
+</html>
